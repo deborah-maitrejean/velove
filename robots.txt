@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /img/
+Disallow: /fonts/
+Disallow: /css/
+Disallow: /js/
+
+Allow: /
+Sitemap : /sitemap.xml

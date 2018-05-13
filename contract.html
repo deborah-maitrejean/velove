@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contrat VéLove</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <div id="contract-container">
+    <h2>Contrat de location</h2>
+    <article>
+      <ol>
+        <li>
+          <h3>Nature et date d’effet du contrat</h3>
+          VéLove met à disposition du locataire, un vélo de marque VéLove, à titre gratuit et à compter du <span id="date-contract"></span> et pour une durée de 20 minutes.
+        </li>
+        <li>
+          <h3>État du vélo</h3>
+          Le vélo devra être restitué dans le même état que lors de sa mise à disposition au locataire. Toutes les détériorations sur le vélo seront à la charge du locataire.
+        </li>
+        <li>
+          <h3>Prix de la location du vélo</h3>
+          Les parties s’entendent sur un prix de location gratuit pendant 20 minutes. Si le locataire dépasse la période de gratuité, le coût du service sera débité de son compte.
+        </li>
+        <li>
+          <h3>Durée et restitution du vélo</h3>
+          Le contrat est à durée indéterminée. Il pourra y être mis fin par le locataire à tout moment, en annulant la réservation. La restitution du vélo s'effectue dans l'une de nos stations.
+        </li>
+        <li>
+          <h3>Autres éléments et accessoires</h3>
+          Des points d'attaches sont à disposition dans nos stations.
+        </li>
+        <li>
+          <h3>Clause en cas de litige</h3>
+          Les parties conviennent expressément que tout litige pouvant naître de l’exécution du présent contrat relèvera de la compétence du tribunal de commerce de Lyon.
+        </li>
+      </ol>
+
+      <p>
+        Fait en deux exemplaires originaux remis à chacune des parties,<br>
+        A Lyon,<br>
+        <img src="img/contract/signatureVelov.png" alt="" width="149" height="44">
+        <img src="" id="signatureModal"></span>
+      </p>
+    </article>
+  </div>
+
+    <script type="text/javascript">
+      var jours = new Array('dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi');
+      var mois = new Array('janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre');
+      var date = new Date();
+      var message = jours[date.getDay()] + ' ';
+      message += date.getDate() + ' ';
+      message += mois[date.getMonth()] + ' ';
+      message += date.getFullYear() + ' à ';
+      message += date.getHours() + 'h';
+      message += date.getMinutes();
+
+      document.getElementById('date-contract').textContent = message;
+    </script>
+  </body>
+</html>

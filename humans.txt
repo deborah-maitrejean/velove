@@ -1,0 +1,11 @@
+/* TEAM */
+Boss: Deborah Maitrejean
+Contact: deborah.maitrejean[at]gmail.com
+Twitter: @D_Maitrejean
+Location: Villeurbanne, France
+
+/* SITE */
+Last update: 2018/03/24
+Language: French
+Standards: HTML5, CSS3, JavaScript, PHP
+Software: Atom
