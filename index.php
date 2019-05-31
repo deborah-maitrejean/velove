@@ -203,7 +203,7 @@ function proteger($adr)
 <script src="js/timer.js"></script>
 <script src="js/map.js"></script>
 <!-- Chargement de l'API Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXCOXAeVTGt274MyIK9IngR7bUyiku0pY&callback=VelovMap.init"
+<script src="https://maps.googleapis.com/maps/api/js?key=yourkey&callback=VelovMap.init"
         async defer></script>
 <script src="js/slider.js"></script>
 <script src="js/navigation.js"></script>
