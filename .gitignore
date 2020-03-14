@@ -1,2 +1,6 @@
 .idea
 .idea/
+.idea/deployment.xml
+.idea/vcs.xml
+bash.exe.stackdump
+.htaccess_bak
