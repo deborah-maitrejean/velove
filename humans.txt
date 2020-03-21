@@ -1,11 +1,15 @@
 /* TEAM */
 Boss: Deborah Maitrejean
-Contact: deborah.maitrejean[at]gmail.com
-Twitter: @D_Maitrejean
-Location: Villeurbanne, France
+Contact: maitrejean[at]deborah@orange.fr
+Website: https://www.deborah-maitrejean.com
+Twitter: D_Maitrejean
+GitBub: https://github.com/deborah-maitrejean
+Linkedin: https://www.linkedin.com/in/d%C3%A9borah-maitrejean/
+Facebook: https://www.facebook.com/DeborahMaitrejeanDeveloppeurWeb
+Location: Lyon, France
 
 /* SITE */
-Last update: 2018/03/24
+Last update: 2020-03-21
 Language: French
 Standards: HTML5, CSS3, JavaScript, PHP
-Software: Atom
+Software: PhpStorm
