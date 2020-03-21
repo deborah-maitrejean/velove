@@ -4,3 +4,5 @@
 .idea/vcs.xml
 bash.exe.stackdump
 .htaccess_bak
+node_modules
+dist

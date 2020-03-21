@@ -1,0 +1,30 @@
+{
+  "name": "velove",
+  "version": "1.0.0",
+  "description": "interactive map of bike rental simulation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deborah-maitrejean/velove.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deborah-maitrejean/velove/issues"
+  },
+  "homepage": "https://github.com/deborah-maitrejean/velove#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

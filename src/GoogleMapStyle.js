@@ -1,4 +1,4 @@
-var mapStyle = [
+let GoogleMapStyle = [
     {
         "elementType": "geometry",
         "stylers": [
@@ -212,4 +212,5 @@ var mapStyle = [
             }
         ]
     }
-]
+];
+module.exports = GoogleMapStyle;

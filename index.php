@@ -99,16 +99,16 @@ function proteger($adr)
     <aside id="mapSection">
         <div id="map">
         </div>
-        <div id="reservation-container">
-            <div id="chargement">
+        <div id="bookingContainer">
+            <div id="loading">
                 <p>Veuillez sélectionner une station sur la carte.</p>
                 <div class="loader">
                     <div class="bar"><span class="sphere"></span></div>
                 </div>
             </div>
             <div id="streetViewMap"></div>
-            <div id="detailsStation" class="details-station-none">
-                <h3 id="titreElt"></h3>
+            <div id="stationDetails" class="details-station-none">
+                <h3 id="titleElt"></h3>
                 <div id="divElt"></div>
                 <div id="div2Elt"></div>
                 <div id="div3Elt"></div>
@@ -124,7 +124,7 @@ function proteger($adr)
                     <p>Attention : Votre navigateur ne supporte pas l'élément canvas.</p>
                 </canvas>
                 <canvas id="canvasVerification"></canvas>
-                <a href="contract.html" id="contract">Lire le contrat</a>
+                <a href="contract.php" id="contract">Lire le contrat</a>
                 <div id="canvasBtn">
                     <button type="submit" name="button" id="sign">Valider</button>
                     <button type="reset" name="button" id="reset">Réinitialiser</button>
@@ -157,7 +157,7 @@ function proteger($adr)
         <div id="timer">
             <p id="noReservation">Aucune réservation en cours.</p>
             <p id="pTimer">Votre vélo est réservé pour <span id="minutes"></span> minute(s) et <span
-                        id="secondes"></span> seconde(s).</p>
+                        id="seconds"></span> seconde(s).</p>
             <p id="endTimerMessage">Fin de la réservation de votre vélo.</p>
             <button type="button" name="button" id="cancelBtn">Annuler</button>
         </div>
@@ -166,49 +166,57 @@ function proteger($adr)
                 <img src="" alt="Votre signature est affichée" id="imgSignature">
             </figure>
             <!-- Trigger/Open The Modal -->
-            <a href="contract.html" id="modalLink">Ouvrir le contrat signé</a>
+            <a href="contract.php" id="modalLink">Ouvrir le contrat signé</a>
             <!-- Modal -->
             <div id="contractModal" class="modal">
                 <div class="modal-content"> <!-- Modal content -->
-                    <span id="close">&times;</span>
-                    <?php include_once("contract.html"); ?>
+                    <span id="close" class="close">&times;</span>
+                    <?php include_once("contract-modal.html"); ?>
                 </div>
             </div>
         </div>
     </section>
 
-    <article id="mentions-legales" class="display-none">
-        <span id="close-mentions-legales"><i class="fa fa-times fa-3x" aria-hidden="true"></i></span>
-        <?php include_once("mentions_legales.php"); ?>
+    <article id="legalNotice" class="modal display-none">
+        <div class="modal-content">
+            <span id="closeLegalNotice" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+            <?php include_once("legal_notice.php"); ?>
+        </div>
     </article>
 
     <footer id="footer">
-        <span>Site réalisé par <a href="http://deborah-maitrejean.com/">Déborah Maitrejean</a></span>
+        <span>Site réalisé par <a href="https://www.deborah-maitrejean.com/">Déborah Maitrejean</a></span>
         <span>VéLove &copy; 2018 Tous droits réservés</span>
-        <a href="#mentions-legales" id="mentions-legales-link">Mentions légales</a>
+        <a href="#legalNotice" id="legalNoticeLink">Mentions légales</a>
     </footer>
 
     <div class="bottom"></div>
 </div>
 
-<script src="js/constantes.js"></script>
-<script src="js/ajax.js"></script>
-<script src="js/GoogleMapStyle.js"></script>
-<script src="js/markerclusterer.js"></script>
-<script src="js/contractPopUp.js"></script>
-<script src="js/canvas.js"></script>
-<!-- Script permettant de vérifier que web storage peut être utilisé -->
-<script src="js/webStorageTest.js"></script>
-<script src="js/contractModal.js"></script>
-<script src="js/timer.js"></script>
-<script src="js/map.js"></script>
-<!-- Chargement de l'API Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=yourkey&callback=VelovMap.init"
+<script src="./dist/polyfill.bundle.js"></script>
+<script src="./dist/app.bundle.js"></script>
+<script src="./dist/Ajax.bundle.js"></script>
+<script src="./dist/constants.bundle.js"></script>
+<script src="./dist/GoogleMapStyle.bundle.js"></script>
+<script src="./dist/markerclusterer.bundle.js"></script>
+<script src="./dist/ContractPopUp.bundle.js"></script>
+<script src="./dist/Booking.bundle.js"></script>
+<script src="./dist/Canvas.bundle.js"></script>
+<script src="./dist/webStorageTest.bundle.js"></script>
+<script src="./dist/ContractModal.bundle.js"></script>
+<script src="./dist/Timer.bundle.js"></script>
+<script src="./dist/FormatDate.bundle.js"></script>
+<script src="./dist/Station.bundle.js"></script>
+<script src="./dist/VeloveMap.bundle.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUaZLYCNquT4HZlCZ63rdeuaNBQD9fr1w&callback=initMap"
         async defer></script>
-<script src="js/slider.js"></script>
-<script src="js/navigation.js"></script>
-<script src="js/menu.js"></script>
-<script src="js/mentionsLegales.js"></script>
+<script src="./dist/Slider.bundle.js"></script>
+<script src="./dist/navigation.bundle.js"></script>
+<script src="./dist/Menu.bundle.js"></script>
+<script src="./dist/LegalNotice.bundle.js"></script>
+<!--<script type="text/javascript">
+    document.getElementById('date-contract').textContent = new FormatDate().format(new Date());
+</script>-->
 
 <!-- Message pour les utilisateurs ayant désactivé JS -->
 <noscript>

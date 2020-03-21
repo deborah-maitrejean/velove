@@ -4,7 +4,7 @@
     <p>Conformément à la loi n° 2004-2005 du 21 juin 2004 pour la confiance dans l'économie numérique, notre site web
         créé
         par <?php echo "<a href='" . proteger("mailto:deborah.maitrejean@gmail.com") . "'>Déborah Maitrejean</a>"; ?>,
-        propriétaire du site <a href="http://deborah-maitrejean.com/">http://deborah-maitrejean.com/</a> met à
+        propriétaire du site <a href="https://www.deborah-maitrejean.com/">https://www.deborah-maitrejean.com/</a> met à
         disposition du public les informations concernant notre entreprise.<br/>
         Eventuellement modifiables, nous vous invitons donc à consulter nos mentions légales le plus souvent possible,
         de manière à en prendre connaissance fréquemment.</p>
@@ -14,7 +14,7 @@
         suivante
         : <?php echo "<a href='" . proteger("mailto:deborah.maitrejean@gmail.com") . "'>deborah.maitrejean@gmail.com</a>"; ?>
         <br/>
-        Le webmaster, <a href="http://deborah-maitrejean.com/">Déborah Maitrejean</a>, est responsable de
+        Le webmaster, <a href="https://www.deborah-maitrejean.com/">Déborah Maitrejean</a>, est responsable de
         l'administration du site, dont l'adresse e-mail est la suivante
         : <?php echo "<a href='" . proteger("mailto:deborah.maitrejean@gmail.com") . "'>deborah.maitrejean@gmail.com</a>"; ?>
         .<br/>
