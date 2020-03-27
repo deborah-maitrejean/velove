@@ -12,7 +12,6 @@ function proteger($adr)
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="utf-8">
     <title>VéLove</title>
     <meta name="description" content="Bienvenue sur VéLove, site interactif de location de vélos sur Lyon."/>
@@ -26,7 +25,9 @@ function proteger($adr)
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/ico/logo.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon-48-48.ico" sizes="48x48">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon-32-32.ico" sizes="32x32">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/favicon-16-16.ico" sizes="16x16">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -42,11 +43,9 @@ function proteger($adr)
 <div id="container">
     <span id="top"></span>
     <header>
-        <img src="img/logo.png" alt="logo du site VeLove, représentant un personnage sur un vélo." id="logo">
+        <img src="img/logo.png" alt="Logo du site VéLove." id="logo">
         <div>
-            <h1>VéLove</h1>
-            <p id="paragraphe1" title="titre du p1">Bienvenue sur VéLove, site interactif de location de vélos sur
-                Lyon</p>
+            <a href="#top" class="scroll"><h1>VéLove</h1></a>
         </div>
         <!-- Menu principal -->
         <nav id="navigation">
@@ -55,45 +54,46 @@ function proteger($adr)
                 <button id="dropbtn"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></button>
                 <button id="dropbtn-close"><i class="fa fa-times fa-3x" aria-hidden="true"></i></button>
                 <div id="dropdown-content">
-                    <a href="#top" class="scroll"><span>VéLove</span></a>
                     <a href="#slides" class="scroll">Mode d'emploi</a>
                     <a href="#map" class="scroll">Réservation</a>
                 </div>
             </div>
             <ul>
-                <li><a href="#top" class="scroll"><span>VéLove</span></a></li>
                 <li><a href="#slides" class="scroll">Mode d'emploi</a></li>
                 <li><a href="#map" class="scroll">Réservation</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="slides-container">
-        <ul id="slides">
-            <li class="slide showing">
-                <img src="img/slider/slide1.png" alt="Diapo 1 : séléctionnez une station sur la carte">
-            </li>
-            <li class="slide">
-                <img src="img/slider/slide2.png"
-                     alt="Diapo 2 : un encart affiche désormais les données de la stations, il faut cliquer sur le bouton 'Réserver un vélo'">
-            </li>
-            <li class="slide">
-                <img src="img/slider/slide3.png" alt="Diapo 3 : il faut signer dans le canvas, puis sur 'valider'">
-            </li>
-            <li class="slide">
-                <img src="img/slider/slide4.png"
-                     alt="Diapo 4 : votre vélo est réservé pour 20 minutes, le décompte s'affiche en bas de page">
-            </li>
-        </ul>
-        <div id="slide-btn">
-            <button id="prev" title="Précédent" class="controls">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </button>
-            <button class="controls" id="pause">Pause</button>
-            <button id="next" title="Suivant" class="controls">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </button>
-        </div>
+    <section id="section">
+        <h2>Bienvenue sur VéLove, site interactif de location de vélos sur Lyon</h2>
+        <section id="slides-container">
+            <ul id="slides">
+                <li class="slide showing">
+                    <img src="img/slider/slide1.png" alt="Diapo 1 : séléctionnez une station sur la carte">
+                </li>
+                <li class="slide">
+                    <img src="img/slider/slide2.png"
+                         alt="Diapo 2 : un encart affiche désormais les données de la stations, il faut cliquer sur le bouton 'Réserver un vélo'">
+                </li>
+                <li class="slide">
+                    <img src="img/slider/slide3.png" alt="Diapo 3 : il faut signer dans le canvas, puis sur 'valider'">
+                </li>
+                <li class="slide">
+                    <img src="img/slider/slide4.png"
+                         alt="Diapo 4 : votre vélo est réservé pour 20 minutes, le décompte s'affiche en bas de page">
+                </li>
+            </ul>
+            <div id="slide-btn">
+                <button id="prev" title="Précédent" class="controls">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <button class="controls" id="pause">Pause</button>
+                <button id="next" title="Suivant" class="controls">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </section>
     </section>
 
     <aside id="mapSection">
@@ -133,25 +133,25 @@ function proteger($adr)
         </div>
     </aside>
 
-    <figure id="legend">
-        <figcaption>Legende</figcaption>
+    <section id="legend">
+        <h3>Légende</h3>
         <div>
-            <div>
+            <figure>
                 <img src="img/legend/station-open-and-available-bike.png" alt="La station est ouverte"
                      class="legendImg">
-                Station ouverte
-            </div>
-            <div>
+                <figcaption>Station ouverte</figcaption>
+            </figure>
+            <figure>
                 <img src="img/legend/no-available-bikes.png" alt="Pas de vélo disponible dans cette station"
                      class="legendImg">
-                Pas de vélo disponible
-            </div>
-            <div>
+                <figcaption>Pas de vélo disponible</figcaption>
+            </figure>
+            <figure>
                 <img src="img/legend/station-closed.png" alt="La station est fermée" class="legendImg">
-                Station fermée
-            </div>
+                <figcaption>Station fermée</figcaption>
+            </figure>
         </div>
-    </figure>
+    </section>
 
     <section id="timerSection">
         <div id="timer">
@@ -170,7 +170,7 @@ function proteger($adr)
             <!-- Modal -->
             <div id="contractModal" class="modal">
                 <div class="modal-content"> <!-- Modal content -->
-                    <span id="close" class="close">&times;</span>
+                    <span id="close" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
                     <?php include_once("contract-modal.html"); ?>
                 </div>
             </div>
@@ -185,8 +185,8 @@ function proteger($adr)
     </article>
 
     <footer id="footer">
-        <span>Site réalisé par <a href="https://www.deborah-maitrejean.com/">Déborah Maitrejean</a></span>
-        <span>VéLove &copy; 2018 Tous droits réservés</span>
+        <span>Application Web réalisée par <strong><a href="https://www.deborah-maitrejean.com/" title="Déborah Maitrejean, développeur Web freelance à Lyon">Déborah Maitrejean</a></strong></span>
+        <span>VéLove &copy; 2018-2020 Tous droits réservés</span>
         <a href="#legalNotice" id="legalNoticeLink">Mentions légales</a>
     </footer>
 
@@ -208,15 +208,12 @@ function proteger($adr)
 <script src="./dist/FormatDate.bundle.js"></script>
 <script src="./dist/Station.bundle.js"></script>
 <script src="./dist/VeloveMap.bundle.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUaZLYCNquT4HZlCZ63rdeuaNBQD9fr1w&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGM8IU3zeS4K7mtXApL-s9-u6dmv8iR3M&callback=initMap"
         async defer></script>
 <script src="./dist/Slider.bundle.js"></script>
 <script src="./dist/navigation.bundle.js"></script>
 <script src="./dist/Menu.bundle.js"></script>
 <script src="./dist/LegalNotice.bundle.js"></script>
-<!--<script type="text/javascript">
-    document.getElementById('date-contract').textContent = new FormatDate().format(new Date());
-</script>-->
 
 <!-- Message pour les utilisateurs ayant désactivé JS -->
 <noscript>
