@@ -7,7 +7,7 @@ import GoogleMapStyle from "./GoogleMapStyle";
 function initMap() {
     class VeloveMap {
         constructor(map, streetViewId, url) {
-            this.map = map
+            this.map = map;
             this.streetViewId = streetViewId;
             this.url = url;
         }
@@ -21,7 +21,7 @@ function initMap() {
                 let marker;
 
                 stations.forEach((station) => {
-                    marker = this.setMarkers(station, marker);
+                    marker = this.setMarkers(station);
                     markers.push(marker);
 
                     this.markerEvent(marker);
@@ -31,56 +31,54 @@ function initMap() {
             }).get();
         }
 
-        setMarkers(data, marker) {
+        setMarkers(station) {
             let unicode;
             let markerColor;
             let markerUrl;
-            let status = data.status; // état de la station, CLOSED or OPEN
-            let availableBikes = data.available_bikes; // nombre de vélos disponibles et opérationnels
+            let status = station.status; // état de la station, CLOSED or OPEN
+            let availableBikes = station.available_bikes; // nombre de vélos disponibles et opérationnels
 
             if (status === 'OPEN') {
                 status = 'ouverte';
                 unicode = '\uf206';
                 markerColor = 'black';
                 if (availableBikes !== 0) {
-                    markerUrl = 'img/label/red-blank.png';
+                    markerUrl = 'img/label/red.png';
                 } else {
-                    markerUrl = 'img/label/orange-blank.png';
+                    markerUrl = 'img/label/blue.png';
                 }
             } else if (status === 'CLOSED' && (availableBikes !== 0 || availableBikes === 0)) {
                 status = 'fermée';
                 unicode = '\uf00d';
                 markerColor = 'black';
-                markerUrl = 'img/label/pink-blank.png';
+                markerUrl = 'img/label/yellow.png';
             }
 
             let image = this.customIcon(markerUrl);
-            let maj = new FormatDate().format(data.last_update);
+            let maj = new FormatDate().format(station.last_update);
 
-            marker = new google.maps.Marker({
-                position: data.position,
+            return new google.maps.Marker({
+                position: station.position,
                 map: this.map,
                 icon: image,
                 label: {
                     fontFamily: 'Fontawesome',
                     text: unicode,
-                    fontSize: '14px',
+                    fontSize: '16px',
                     color: markerColor,
                 },
-                title: `Station N° ${data.name} - ${status}`,
-                number: data.number,
-                name: data.name,
-                address: data.address,
-                banking: data.banking,
+                title: `Station N° ${station.name} - ${status}`,
+                number: station.number,
+                name: station.name,
+                address: station.address,
+                banking: station.banking,
                 status: status,
-                contractName: data.contract_name,
-                bikeStands: data.bike_stands,
-                availableBikeStands: data.available_bike_stands,
+                contractName: station.contract_name,
+                bikeStands: station.bike_stands,
+                availableBikeStands: station.available_bike_stands,
                 availableBikes: availableBikes,
                 maj: maj,
             });
-
-            return marker;
         }
 
         customIcon(markerUrl) {
